@@ -11,7 +11,7 @@ auth = HTTPBasicAuth()
 
 @auth.get_password
 def verificar_acesso(username):
-    if username == 'diego':
+    if username == 'diego':  # YOUR USERNAME AND PASSWORD
         return '123'
     return None
 
@@ -79,3 +79,5 @@ def del_games(id=None):
 @bp_api.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'URL nao encontrada!'}), 404)
+
+#TESTED WITH POSTMAN
